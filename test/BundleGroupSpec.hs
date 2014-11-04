@@ -1,3 +1,4 @@
+{-
 overlapping :: Int -> [Char] -> ([Char], Int) -> Bool
 overlapping myPos myName (name, pos) = pos == myPos && (not (name == myName))
 
@@ -21,4 +22,12 @@ events =
 
 main = do
         mapM_ print $ embed (solarSystem) (empty, events)
+-}
 
+module BundleGroupSpec where
+
+import Test.Hspec
+
+spec :: Spec
+spec = do
+        return ()
