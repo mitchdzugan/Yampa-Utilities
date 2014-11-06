@@ -10,7 +10,7 @@ import Data.List
 poolIntercomm :: (Int, SF (a, [b]) (c, b)) -> SF ([a], [b]) [b] -> SF ([a], [b]) [b]
 poolIntercomm (ind, cur) acc = proc(inputs, _) -> do
     rec blist <- acc -< (inputs, blist)
-        (_, b) <- cur -< ((inputs !! ind), blist) 
+        (_, b) <- cur -< ((inputs !! ind), blist)
     returnA -< b:blist
 
 
